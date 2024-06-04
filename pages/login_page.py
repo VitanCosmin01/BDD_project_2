@@ -26,3 +26,10 @@ class LoginPage(BasePage):
 
     def main_error_is_displayed(self):
         assert self.is_displayed(locator=self.MAIN_ERROR)
+
+# Scenariu 2
+    def email_error(self):
+        assert self.is_displayed(locator=self.EMAIL_ERROR)
+
+    def email_error_message(self):
+        assert self.is_displayed(locator=self.EMAIL_ERROR)
