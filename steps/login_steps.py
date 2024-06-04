@@ -41,3 +41,14 @@ def step_impl(context):
 @then('Email error message contains "Please enter your email"')
 def step_impl(context):
     context.login_page.email_error_message()
+
+
+# Scenariu 3
+@when("I insert 'format invalid' email")
+def step_impl(context):
+    context.login_page.insert_email("format invalid")
+
+
+@then('Email error message contains "Wrong email"')
+def step_impl(context):
+    context.login_page.email_error_message()
