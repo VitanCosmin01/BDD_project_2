@@ -1,4 +1,6 @@
+
 from browser import Browser
+from pages.login_page import LoginPage
 
 
 def before_all(context):
@@ -7,6 +9,7 @@ def before_all(context):
     inaintea rularii tuturor pasilor
     """
     context.browser = Browser()
+    context.login_page = LoginPage()
 
 
 def after_all(context):
